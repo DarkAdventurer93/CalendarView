@@ -1666,7 +1666,7 @@ public class CalendarView extends FrameLayout {
         }
         java.util.Calendar calendar = java.util.Calendar.getInstance();
         int day = calendar.get(java.util.Calendar.DAY_OF_MONTH);
-        if (getCurDay() == day) {
+        if (timeZone == null && getCurDay() == day) {
             return;
         }
         mDelegate.updateCurrentDay(timeZone);
