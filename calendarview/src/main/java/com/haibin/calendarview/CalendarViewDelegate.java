@@ -451,6 +451,7 @@ public class CalendarViewDelegate {
      * 请使用`tools:preview_calendar`
      */
     public String previewCalendar = null;
+    private TimeZone timeZone;
 
 
     CalendarViewDelegate(Context context, @Nullable AttributeSet attrs) {
@@ -1009,6 +1010,11 @@ public class CalendarViewDelegate {
     }
 
     void updateCurrentDay() {
+       updateCurrentDay(null);
+    }
+
+    void updateCurrentDay(TimeZone timeZone) {
+        this.timeZone = timeZone;
         Date d = new Date();
         mCurrentDate.setYear(CalendarUtil.getDate("yyyy", d, timeZone));
         mCurrentDate.setMonth(CalendarUtil.getDate("MM", d, timeZone));

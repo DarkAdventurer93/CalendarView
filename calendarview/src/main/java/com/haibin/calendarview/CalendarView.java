@@ -1669,7 +1669,7 @@ public class CalendarView extends FrameLayout {
         if (getCurDay() == day) {
             return;
         }
-        mDelegate.updateCurrentDay();
+        mDelegate.updateCurrentDay(timeZone);
         mMonthPager.updateCurrentDate();
         mWeekPager.updateCurrentDate();
     }
