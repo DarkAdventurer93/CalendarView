@@ -36,6 +36,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
 
 /**
  * 日历布局
@@ -95,6 +96,7 @@ public class CalendarView extends FrameLayout {
     }
 
     public int calendarLayoutId = R.layout.cv_layout_calendar_view;
+    private TimeZone timeZone;
 
     /**
      * 初始化
@@ -1651,6 +1653,14 @@ public class CalendarView extends FrameLayout {
      * 更新当前日期
      */
     public final void updateCurrentDate() {
+        updateCurrentDate(null);
+    }
+
+    /**
+     * 更新当前日期
+     */
+    public final void updateCurrentDate(TimeZone timeZone) {
+        this.timeZone = timeZone;
         if (mDelegate == null || mMonthPager == null || mWeekPager == null) {
             return;
         }

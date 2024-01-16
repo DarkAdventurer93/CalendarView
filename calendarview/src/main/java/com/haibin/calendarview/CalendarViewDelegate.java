@@ -30,6 +30,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
 
 /**
  * Google规范化的属性委托,
@@ -451,6 +452,7 @@ public class CalendarViewDelegate {
      */
     public String previewCalendar = null;
 
+
     CalendarViewDelegate(Context context, @Nullable AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CalendarView);
 
@@ -595,9 +597,9 @@ public class CalendarViewDelegate {
                 e.printStackTrace();
             }
         }
-        mCurrentDate.setYear(CalendarUtil.getDate("yyyy", d));
-        mCurrentDate.setMonth(CalendarUtil.getDate("MM", d));
-        mCurrentDate.setDay(CalendarUtil.getDate("dd", d));
+        mCurrentDate.setYear(CalendarUtil.getDate("yyyy", d, timeZone));
+        mCurrentDate.setMonth(CalendarUtil.getDate("MM", d, timeZone));
+        mCurrentDate.setDay(CalendarUtil.getDate("dd", d, timeZone));
         mCurrentDate.setCurrentDay(true);
         LunarCalendar.setupLunarCalendar(mCurrentDate);
         setRange(mMinYear, mMinYearMonth, mMaxYear, mMaxYearMonth);
@@ -1008,9 +1010,9 @@ public class CalendarViewDelegate {
 
     void updateCurrentDay() {
         Date d = new Date();
-        mCurrentDate.setYear(CalendarUtil.getDate("yyyy", d));
-        mCurrentDate.setMonth(CalendarUtil.getDate("MM", d));
-        mCurrentDate.setDay(CalendarUtil.getDate("dd", d));
+        mCurrentDate.setYear(CalendarUtil.getDate("yyyy", d, timeZone));
+        mCurrentDate.setMonth(CalendarUtil.getDate("MM", d, timeZone));
+        mCurrentDate.setDay(CalendarUtil.getDate("dd", d, timeZone));
         LunarCalendar.setupLunarCalendar(mCurrentDate);
     }
 

@@ -22,6 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 /**
  * 一些日期辅助计算工具
@@ -34,7 +35,15 @@ public final class CalendarUtil {
 
     @SuppressLint("SimpleDateFormat")
     static int getDate(String formatStr, Date date) {
+        return getDate(formatStr, date, null);
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    static int getDate(String formatStr, Date date, TimeZone timeZone) {
         SimpleDateFormat format = new SimpleDateFormat(formatStr);
+        if (timeZone != null) {
+            format.setTimeZone(timeZone);
+        }
         return Integer.parseInt(format.format(date));
     }
 
