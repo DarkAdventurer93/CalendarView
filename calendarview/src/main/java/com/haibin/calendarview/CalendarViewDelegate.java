@@ -933,7 +933,7 @@ public class CalendarViewDelegate {
         this.mYearViewScrollable = yearViewScrollable;
     }
 
-    int getWeekStart() {
+    public int getWeekStart() {
         return mWeekStart;
     }
 
