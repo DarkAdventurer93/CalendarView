@@ -106,7 +106,7 @@ public abstract class BaseView extends View implements View.OnClickListener, Vie
     /**
      * 日历布局，需要在日历下方放自己的布局
      */
-    CalendarLayout mParentLayout;
+    protected CalendarLayout mParentLayout;
 
     /**
      * 日历项
@@ -136,7 +136,7 @@ public abstract class BaseView extends View implements View.OnClickListener, Vie
     /**
      * 是否点击
      */
-    boolean isClick = true;
+   protected boolean isClick = true;
 
     /**
      * 手势是否按下
