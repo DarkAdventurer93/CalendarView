@@ -78,16 +78,16 @@ public class CalendarViewDelegate {
     /**
      * 全部显示
      */
-    static final int MODE_ALL_MONTH = 0;
+    public static final int MODE_ALL_MONTH = 0;
     /**
      * 仅显示当前月份
      */
-    static final int MODE_ONLY_CURRENT_MONTH = 1;
+    public static final int MODE_ONLY_CURRENT_MONTH = 1;
 
     /**
      * 自适应显示，不会多出一行，但是会自动填充
      */
-    static final int MODE_FIT_MONTH = 2;
+    public static final int MODE_FIT_MONTH = 2;
 
     /**
      * 月份显示模式
@@ -340,38 +340,38 @@ public class CalendarViewDelegate {
     /**
      * 点击Padding位置事件
      */
-    CalendarView.OnClickCalendarPaddingListener mClickCalendarPaddingListener;
+    public CalendarView.OnClickCalendarPaddingListener mClickCalendarPaddingListener;
 
     /**
      * 日期拦截事件
      */
-    CalendarView.OnCalendarInterceptListener mCalendarInterceptListener;
+    public CalendarView.OnCalendarInterceptListener mCalendarInterceptListener;
 
     /**
      * 日期选中监听
      */
-    CalendarView.OnCalendarSelectListener mCalendarSelectListener;
+    public CalendarView.OnCalendarSelectListener mCalendarSelectListener;
 
     /**
      * 范围选择
      */
-    CalendarView.OnCalendarRangeSelectListener mCalendarRangeSelectListener;
+    public CalendarView.OnCalendarRangeSelectListener mCalendarRangeSelectListener;
 
 
     /**
      * 多选选择事件
      */
-    CalendarView.OnCalendarMultiSelectListener mCalendarMultiSelectListener;
+    public CalendarView.OnCalendarMultiSelectListener mCalendarMultiSelectListener;
 
     /**
      * 外部日期长按事件
      */
-    CalendarView.OnCalendarLongClickListener mCalendarLongClickListener;
+    public CalendarView.OnCalendarLongClickListener mCalendarLongClickListener;
 
     /**
      * 内部日期切换监听，用于内部更新计算
      */
-    CalendarView.OnInnerDateSelectedListener mInnerListener;
+    public CalendarView.OnInnerDateSelectedListener mInnerListener;
 
     /**
      * 快速年份切换
@@ -870,7 +870,7 @@ public class CalendarViewDelegate {
         return mYearViewSchemeTextColor;
     }
 
-    int getMonthViewShowMode() {
+   public int getMonthViewShowMode() {
         return mMonthViewShowMode;
     }
 
@@ -909,15 +909,15 @@ public class CalendarViewDelegate {
         this.mSchemeThemeColor = schemeColor;
     }
 
-    boolean isMonthViewScrollable() {
+    public boolean isMonthViewScrollable() {
         return mMonthViewScrollable;
     }
 
-    boolean isWeekViewScrollable() {
+    public boolean isWeekViewScrollable() {
         return mWeekViewScrollable;
     }
 
-    boolean isYearViewScrollable() {
+    public boolean isYearViewScrollable() {
         return mYearViewScrollable;
     }
 

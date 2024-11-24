@@ -209,7 +209,7 @@ public class CalendarLayout extends LinearLayout {
      *
      * @param selectPosition 月视图被点击的position
      */
-    final void updateSelectPosition(int selectPosition) {
+   public final void updateSelectPosition(int selectPosition) {
         int line = (selectPosition + 7) / 7;
         mViewPagerTranslateY = (line - 1) * mItemHeight;
     }
@@ -219,7 +219,7 @@ public class CalendarLayout extends LinearLayout {
      *
      * @param week week
      */
-    final void updateSelectWeek(int week) {
+    public final void updateSelectWeek(int week) {
         mViewPagerTranslateY = (week - 1) * mItemHeight;
     }
 

@@ -1798,7 +1798,7 @@ public class CalendarView extends FrameLayout {
      * 内部日期选择，不暴露外部使用
      * 主要是用于更新日历CalendarLayout位置
      */
-    interface OnInnerDateSelectedListener {
+   public interface OnInnerDateSelectedListener {
         /**
          * 月视图点击
          *
