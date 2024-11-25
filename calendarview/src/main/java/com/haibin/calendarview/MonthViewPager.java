@@ -371,7 +371,7 @@ public final class MonthViewPager extends ViewPager {
         }
 
         updateSelected();
-        if (mDelegate.getSelectMode() == CalendarViewDelegate.MODE_FIT_MONTH) {
+        if (mDelegate.getMonthViewShowMode() == CalendarViewDelegate.MODE_FIT_MONTH) {
             updateItemHeight();
         }
     }
