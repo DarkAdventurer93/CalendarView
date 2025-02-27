@@ -33,7 +33,7 @@ import androidx.viewpager.widget.ViewPager;
  * 年份+月份选择布局
  * ViewPager + RecyclerView
  */
-public final class YearViewPager extends ViewPager {
+public final class YearViewPager extends RtlViewPager {
     private int mYearCount;
     private boolean isUpdateYearView;
     private CalendarViewDelegate mDelegate;

@@ -35,7 +35,7 @@ import java.util.List;
  * WeekViewPager需要和CalendarView关联:
  */
 
-public final class WeekViewPager extends ViewPager {
+public final class WeekViewPager extends RtlViewPager {
     private boolean isUpdateWeekView;
     private int mWeekCount;
     public CalendarViewDelegate mDelegate;

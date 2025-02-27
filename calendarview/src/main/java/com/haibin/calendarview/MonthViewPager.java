@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * 月份切换ViewPager，自定义适应高度
  */
-public final class MonthViewPager extends ViewPager {
+public final class MonthViewPager extends RtlViewPager {
 
     private boolean isUpdateMonthView;
 
